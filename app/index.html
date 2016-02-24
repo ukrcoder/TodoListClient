@@ -22,7 +22,7 @@
       <input type="text" ng-model="taskDescription" ng-keypress="($event.which == 13)?addTask(taskDescription):0">
     </div>
     <ul ng-repeat="task in tasks">
-      <li>{{task.description}}<div ng-click="removeTask({{task.id}})" class="rm-btn"></div></li>
+      <li>{{task.description}}<div ng-click="removeTask({{task.id}}, $index)" class="rm-btn"></div></li>
     </ul>
   </div>
 
@@ -30,6 +30,7 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower install oclazyload"></script>
   <script src="js/TodoRoute.js"></script>
+  <script src="controller/TodoController.js"></script>
 
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
